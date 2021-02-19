@@ -1,5 +1,4 @@
 requests
 requests-oauthlib
 oauthlib
-pyjwt
 click
