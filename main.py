@@ -52,6 +52,10 @@ def main(base_url, app_type, consumer_key, rsa_private_key):
             rsa_private_key_file.write(rsa_key.export_key())
             rsa_public_key_file.write(rsa_key.publickey().export_key())
 
+    print(f"Please configure an applink with consumer key {consumer_key} and this private key:")
+    print(rsa_key.publickey().export_key().decode())
+    input("Press Enter when done...")
+
     # Get request token
     oauth = OAuth1(
         client_key=consumer_key,
