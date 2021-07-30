@@ -59,7 +59,7 @@ def main(base_url, app_type, consumer_key, rsa_private_key):
     # Get request token
     oauth = OAuth1(
         client_key=consumer_key,
-        rsa_key=rsa_key,
+        rsa_key=rsa_key.export_key().decode(),
         signature_method=SIGNATURE_RSA,
         signature_type=SIGNATURE_TYPE_QUERY,
         callback_uri="",
@@ -81,7 +81,7 @@ def main(base_url, app_type, consumer_key, rsa_private_key):
     # Fetch Access Token
     oauth = OAuth1(
         client_key=consumer_key,
-        rsa_key=rsa_key,
+        rsa_key=rsa_key.export_key().decode(),
         signature_method=SIGNATURE_RSA,
         signature_type=SIGNATURE_TYPE_QUERY,
         resource_owner_key=request_token,
@@ -101,7 +101,7 @@ def main(base_url, app_type, consumer_key, rsa_private_key):
     # Try it out
     oauth = OAuth1(
         client_key=consumer_key,
-        rsa_key=rsa_key,
+        rsa_key=rsa_key.export_key().decode(),
         signature_method=SIGNATURE_RSA,
         signature_type=SIGNATURE_TYPE_QUERY,
         resource_owner_key=access_token,
