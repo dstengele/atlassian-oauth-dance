@@ -1,5 +1,0 @@
-pycryptodome
-requests
-requests-oauthlib
-oauthlib[signedtoken]
-click

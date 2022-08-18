@@ -9,6 +9,6 @@ and get the Consumer Token and Consumer Token Secret parameters.
 * click: Used for the CLI
 
 ## Usage
-Run `main.py --help` to see the available parameters. You need to
+Run with `poetry run dance --help` to see the available parameters. You need to
 generate a RSA Key Pair beforehand and set up a Application Link with
 it.

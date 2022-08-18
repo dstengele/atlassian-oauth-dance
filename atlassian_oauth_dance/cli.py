@@ -35,7 +35,7 @@ from Crypto.PublicKey import RSA
     help="Path to the RSA Private Key file to use for OAuth",
     default="private.pem",
 )
-def main(base_url, app_type, consumer_key, rsa_private_key):
+def cli(base_url, app_type, consumer_key, rsa_private_key):
     request_token_url = f"{base_url}/plugins/servlet/oauth/request-token"
     base_authorization_url = f"{base_url}/plugins/servlet/oauth/authorize"
     access_token_url = f"{base_url}/plugins/servlet/oauth/access-token"
@@ -116,4 +116,4 @@ def main(base_url, app_type, consumer_key, rsa_private_key):
 
 
 if __name__ == "__main__":
-    main()
+    cli()
